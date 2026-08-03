@@ -26,9 +26,9 @@ play.addEventListener("click", (event) => {
   pause.classList.remove("toggle");
   play.classList.add("toggle");
   video.play();
-  if (traceTrack) {
-    video.currentTime = traceTrack;
-  }
+  // if (traceTrack) {
+  //   video.currentTime = traceTrack;
+  // }
 });
 
 pause.addEventListener("click", (event) => {
@@ -63,13 +63,14 @@ video.addEventListener("timeupdate", (event) => {
   let time = Math.floor(video.currentTime);
   if (time >= 0 && time <= 9) currentTimeOfVideo.textContent = `00:0${time}`;
   else currentTimeOfVideo.textContent = `00:${time}`;
-    let percent = (video.currentTime / video.duration) * 100;
+  let percent = (video.currentTime / video.duration) * 100;
   timeLine.style.width = `${percent}%`;
 });
 
 volume.addEventListener("click", (event) => {
   volumeSlider.classList.remove("show");
 });
+
   volumeSlider.addEventListener('change',(event)=>{
     let vol = parseFloat(event.target.value)*0.01;
     video.volume = vol;
@@ -78,7 +79,8 @@ volume.addEventListener("click", (event) => {
 
 speed.addEventListener('click',(event)=>{
   playbackSpeed.classList.remove('show');
-})
+});
+
   playbackSpeed.addEventListener('change',(event)=>{
     video.playbackRate = parseFloat(event.target.value);
     playbackSpeed.classList.add('show');
