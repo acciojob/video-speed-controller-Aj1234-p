@@ -55,14 +55,14 @@ pause.addEventListener("click", (event) => {
 
 rewind.addEventListener("click", (event) => {
   console.log("inside rewind click ");
-  if (traceTrack - 2 >= 0) traceTrack -= 2;
+  if (traceTrack - 10 >= 0) traceTrack -= 10;
   else traceTrack = 0;
   video.currentTime = traceTrack;
 });
 
 skipForward.addEventListener("click", (event) => {
   console.log("inside keep forward click ");
-  if (traceTrack + 3 <= video.duration) traceTrack += 3;
+  if (traceTrack + 25 <= video.duration) traceTrack += 25;
   else traceTrack = video.duration;
   video.currentTime = traceTrack;
 });
