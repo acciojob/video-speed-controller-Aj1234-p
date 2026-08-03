@@ -1,2 +1,96 @@
 
-/* Your CSS Code here. */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.toggle{
+  display: none;
+}
+
+button{
+  all: unset;
+  cursor: pointer;
+  color: white;
+}
+
+.wrapper{
+  background-color: blue;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container{
+  height: 50%;
+  width: 40%;
+  position: relative;
+}
+
+.flex{
+  height: 100%;
+  width: 100%;
+}
+
+.progress__filled{
+  position: absolute;
+  height: 4px;
+  width: 95%;
+  left: 10px;
+  bottom: 35px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+.player__control{
+  position: absolute;
+  bottom: 10px;
+  left: 42%;
+}
+
+.volume__time{
+  position: absolute;
+  bottom: 42px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.current-time{
+  color: white;
+  padding: 10px;
+}
+
+.show{
+  display: none;
+}
+
+/* .volume-slider{
+   width: 35px;
+   height: 0px;
+   background-color: black;
+} */
+
+.volume{
+  color: blue;
+}
+
+.timeline{
+  height: 2px;
+  width: 0px;
+  background-color: white;
+  border-radius: 2px;
+  transition: width 0.1s linear;
+}
+
+.speed-bar{
+  color: white;
+  margin-left: 3px;
+}
+
+.volume__speed{
+  display: flex;
+  gap: 5px;
+}
