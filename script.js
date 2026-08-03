@@ -1,9 +1,9 @@
-  function handleUpdate() {
-      const suffix = this.dataset.sizing || '';
-      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
-    }
-inputs.forEach(input => input.addEventListener('change', handleUpdate));
-inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+//   function handleUpdate() {
+//       const suffix = this.dataset.sizing || '';
+//       document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+//     }
+// inputs.forEach(input => input.addEventListener('change', handleUpdate));
+// inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
 
 const video = document.querySelector(".flex");
 const playerButton = document.querySelector(".player__button");
@@ -63,7 +63,7 @@ video.addEventListener("timeupdate", (event) => {
   let time = Math.floor(video.currentTime);
   if (time >= 0 && time <= 9) currentTimeOfVideo.textContent = `00:0${time}`;
   else currentTimeOfVideo.textContent = `00:${time}`;
-    let percent = Math.floor((video.currentTime / video.duration) * 100);
+    let percent = (video.currentTime / video.duration) * 100;
   timeLine.style.width = `${percent}%`;
 });
 
