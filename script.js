@@ -71,8 +71,8 @@ volume.addEventListener("click", (event) => {
 
 speed.addEventListener('click',(event)=>{
   playbackSpeed.classList.remove('show');
+})
   playbackSpeed.addEventListener('change',(event)=>{
     video.playbackRate = parseFloat(event.target.value);
     playbackSpeed.classList.add('show');
   })
-})
