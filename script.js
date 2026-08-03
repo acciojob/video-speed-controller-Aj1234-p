@@ -31,15 +31,11 @@ pause.addEventListener("click", (event) => {
 });
 
 rewind.addEventListener("click", (event) => {
-  if (traceTrack - 10 >= 0) traceTrack -= 10;
-  else traceTrack = 0;
-  video.currentTime = traceTrack;
+   video.currentTime = Math.max(video.currentTime-10,0);
 });
 
 skipForward.addEventListener("click", (event) => {
-  if (traceTrack + 25 <= video.duration) traceTrack += 25;
-  else traceTrack = video.duration;
-  video.currentTime = traceTrack;
+ video.currentTime = Math.min(video.currentTime+25,video.duration);
 });
 
 video.addEventListener("loadedmetadata", (event) => {
