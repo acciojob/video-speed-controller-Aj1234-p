@@ -67,12 +67,6 @@ button{
   display: none;
 }
 
-/* .volume-slider{
-   width: 35px;
-   height: 0px;
-   background-color: black;
-} */
-
 .volume{
   color: blue;
 }
@@ -95,3 +89,10 @@ button{
   gap: 5px;
 }
 
+.player__button{
+  font-size: 15px;
+}
+
+#skipButton, #rewind{
+  font-size: 10px;
+}

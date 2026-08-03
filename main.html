@@ -21,7 +21,7 @@
 </html>
  -->
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -38,7 +38,7 @@
            </div>
 
            <div class="player__control">
-             <button id="rewind">&#9664;&#9664;</button>
+             <button id="rewind">	&#9664;&#9664;</button>
              <button class="player__button" id="play">&#9658;</button>
              <button class="player__button toggle" id="pause">&#10074;&#10074;</button>
              <button id="skipButton">&#9654;&#9654;</button>
@@ -49,19 +49,19 @@
             </div>
             <div class="volume__speed">
               <div class="speed__bar">
-                   <button id="speed"><img src="speed-removebg-preview.png" height="15px" width="25px" alt=""></button>
-                   <select name="speed" class="playback-speed show">
-                   <option>0.5x</option>
-                   <option>1x</option>
-                   <option>2x</option>
+                   <button id="speed">&#9201;</button>
+                   <select class="playback__speed show">
+                   <option value="0.5x">0.5x</option>
+                   <option value="1x" selected>1x</option>
+                   <option value="2x">2x</option>
                   </select>
                   </div>
                   <button class="volume" id="volume">&#128266;</button>
-                  <!-- <input type="range" class="volume-slider show" min="0" value="50" max="100"> -->
                   <select name="speed" class="volume-slider show">
-                   <option>25%</option>
-                   <option>50%</option>
-                   <option>100%</option>
+                   <option value="25%">25%</option>
+                   <option value="50%">50%</option>
+                   <option value="75%">75%</option>
+                   <option value="100%">100%</option>
                   </select>
             </div>
           </div>
