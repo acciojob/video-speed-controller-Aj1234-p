@@ -22,17 +22,36 @@ video.controls = false;
 let traceTrack = null;
 let totalDuration = null;
 
-play.addEventListener("click", (event) => {
-  pause.classList.remove("toggle");
-  play.classList.add("toggle");
+play.addEventListener("click", () => {
   video.play();
 });
 
-pause.addEventListener("click", (event) => {
-  pause.classList.add("toggle");
-  play.classList.remove("toggle");
+pause.addEventListener("click", () => {
   video.pause();
 });
+
+// New: video's own events drive the icon, regardless of what triggered play/pause
+video.addEventListener("play", () => {
+  pause.classList.remove("toggle");
+  play.classList.add("toggle");
+});
+
+video.addEventListener("pause", () => {
+  pause.classList.add("toggle");
+  play.classList.remove("toggle");
+});
+
+// play.addEventListener("click", (event) => {
+//   pause.classList.remove("toggle");
+//   play.classList.add("toggle");
+//   video.play();
+// });
+
+// pause.addEventListener("click", (event) => {
+//   pause.classList.add("toggle");
+//   play.classList.remove("toggle");
+//   video.pause();
+// });
 
 rewind.addEventListener("click", (event) => {
    video.currentTime = Math.max(video.currentTime-10,0);
