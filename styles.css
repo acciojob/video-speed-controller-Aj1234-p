@@ -76,7 +76,6 @@ button{
   width: 0px;
   background-color: white;
   border-radius: 2px;
-  transition: width 0.1s linear;
 }
 
 .speed-bar{

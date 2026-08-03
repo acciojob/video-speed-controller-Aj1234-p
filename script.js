@@ -26,9 +26,6 @@ play.addEventListener("click", (event) => {
   pause.classList.remove("toggle");
   play.classList.add("toggle");
   video.play();
-  // if (traceTrack) {
-  //   video.currentTime = traceTrack;
-  // }
 });
 
 pause.addEventListener("click", (event) => {
@@ -52,14 +49,12 @@ video.addEventListener("loadedmetadata", (event) => {
 });
 
 video.addEventListener("ended", (event) => {
-  traceTrack = null;
   video.currentTime = 0;
   pause.classList.add("toggle");
   play.classList.remove("toggle");
 });
 
 video.addEventListener("timeupdate", (event) => {
-  traceTrack = video.currentTime;
   let time = Math.floor(video.currentTime);
   if (time >= 0 && time <= 9) currentTimeOfVideo.textContent = `00:0${time}`;
   else currentTimeOfVideo.textContent = `00:${time}`;
