@@ -56,7 +56,7 @@ video.addEventListener("timeupdate", (event) => {
   let time = Math.floor(video.currentTime);
   if (time >= 0 && time <= 9) currentTimeOfVideo.textContent = `00:0${time}`;
   else currentTimeOfVideo.textContent = `00:${time}`;
-  let percent = (video.currentTime / video.duration) * 100;
+    let percent = Math.floor((video.currentTime / video.duration) * 100);
   timeLine.style.width = `${percent}%`;
 });
 
