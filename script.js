@@ -62,12 +62,12 @@ video.addEventListener("timeupdate", (event) => {
 
 volume.addEventListener("click", (event) => {
   volumeSlider.classList.remove("show");
+});
   volumeSlider.addEventListener('change',(event)=>{
     let vol = parseFloat(event.target.value)*0.01;
     video.volume = vol;
     volumeSlider.classList.add('show');
   })
-});
 
 speed.addEventListener('click',(event)=>{
   playbackSpeed.classList.remove('show');
